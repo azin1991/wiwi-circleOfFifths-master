@@ -4,7 +4,7 @@ let outC2;
 let outCH;
 let outCT;
 let outCSP; // 分隔
-let outText = ["沒有升降", "1 個 #", "2 個 #", "3 個 #", "4 個 #", "7 個 b / 5 個 #", "6 個 b / 6 個 #", "5 個 b / 7 個 #", "4 個 b", "3 個 b", "2 個 b", "1 個 b"]
+let outText = ["No #/b", "1 #", "2 #", "3 #", "4 #", "7 b / 5 #", "6 b / 6 #", "5 b / 7 #", "4 b", "3 b", "2 b", "1 b"]
 let outTextSize = 15;
 
 let majorRatio = 0.74;
@@ -22,18 +22,18 @@ let minorText = ["Am", "Em", "Bm", "F#m", "C#m", "Abm/G#m", "Ebm/D#m", "Bbm/A#m"
 let minorTextSize = 17;
 
 let detailText1 = [
-  "C 大調 ─ A 小調",
-  "G 大調 ─ E 小調",
-  "D 大調 ─ B 小調",
-  "A 大調 ─ F# 小調",
-  "E 大調 ─ C# 小調",
-  "Cb 大調 ─ Ab 小調 / B 大調 ─ G# 小調",
-  "Gb 大調 ─ Eb 小調 / F# 大調 ─ D# 小調",
-  "Db 大調 ─ Bb 小調 / C# 大調 ─ A# 小調",
-  "Ab 大調 ─ F 小調",
-  "Eb 大調 ─ C 小調",
-  "Bb 大調 ─ G 小調",
-  "F 大調 ─ D 小調"
+  "C Major ─ A minor",
+  "G Major ─ E minor",
+  "D Major ─ B minor",
+  "A Major ─ F# minor",
+  "E Major ─ C# minor",
+  "Cb Major ─ Ab minor / B Major ─ G# minor",
+  "Gb Major ─ Eb minor / F# Major ─ D# minor",
+  "Db Major ─ Bb minor / C# Major ─ A# minor",
+  "Ab Major ─ F minor",
+  "Eb Major ─ C minor",
+  "Bb Major ─ G minor",
+  "F Major ─ D minor"
 ]
 let detailTextSize = 22;
 
@@ -86,7 +86,7 @@ function setup() {
   minorTextSize = width * 0.02125;
   detailTextSize = width * 0.0275;
 
-  lockButton = createButton('[已鎖定]');
+  lockButton = createButton('[Locked]');
   lockButton.position(19, 19);
   lockButton.mousePressed(toggleLocked);
 
@@ -95,10 +95,10 @@ function setup() {
 
 function toggleLocked() {
   if (locked) {
-    lockButton.html("鎖定");
+    lockButton.html("Lock");
     locked = false;
   } else {
-    lockButton.html("[已鎖定]");
+    lockButton.html("[Locked]");
     locked = true;
   }
 }
