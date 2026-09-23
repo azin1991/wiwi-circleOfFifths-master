@@ -27,9 +27,9 @@ let detailText1 = [
   "D Major ─ B minor",
   "A Major ─ F# minor",
   "E Major ─ C# minor",
-  "Cb Major ─ Ab minor / B Major ─ G# minor",
-  "Gb Major ─ Eb minor / F# Major ─ D# minor",
-  "Db Major ─ Bb minor / C# Major ─ A# minor",
+  "Cb Maj ─ Ab min / B Maj ─ G# min",
+  "Gb Maj ─ Eb min / F# Maj ─ D# min",
+  "Db Maj ─ Bb min / C# Maj ─ A# min",
   "Ab Major ─ F minor",
   "Eb Major ─ C minor",
   "Bb Major ─ G minor",
@@ -295,7 +295,7 @@ function drawSigNumber(s, f) {
   }
   textSize(width / 60);
   fill(90);
-  text(`（${-f} 個降記號 / ${s} 個升記號）`, 0, height * 0.16);
+  text(`（${-f} sharps / ${s} flats）`, 0, height * 0.16);
 }
 
 function drawKeySig(sig, x, y) {
